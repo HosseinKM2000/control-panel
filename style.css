@@ -1,0 +1,132 @@
+@font-face {
+    font-family: javan;
+    src: url(./font/javan.ttf);
+}
+@font-face {
+    font-family: dibaj;
+    src: url(./font/Dibaj/Farsi-Num/ttf/Dibaj\ FaNum\ Bold.ttf);
+}
+@font-face {
+    font-family: aria;
+    src: url(./font/آریا/Aria-Medium.ttf);
+}
+
+
+html{
+   font-size: 100%;
+}
+body{
+    font-family: dibaj;
+    text-align: right;
+    direction: rtl;
+    color: #464646;
+}
+
+li{
+    cursor: pointer;
+}
+p{
+    cursor: pointer;
+}
+
+.menu{
+    width: 1.875rem ;
+    cursor: pointer;
+}
+.menu:active{
+   animation: scale 0.5s 1;
+}
+
+@keyframes scale{
+    0%{transform: scale(0.8,0.8);}
+    100%{transform: scale(1,1);}
+}
+
+.navbar{
+    background-color: rgb(230, 230, 230);
+}
+
+
+.nav-menu{
+    background-color: rgb(42, 53, 59);
+    height: fit-content;
+    border: solid #f8bf0c 2px;
+}
+
+#box-coll > img.coll-off {
+    transform: rotate(0deg);
+}
+
+#box-coll > img{
+    transform: rotate(-90deg);
+}
+
+#box-coll > .collapsed{
+    transform: rotate(0deg);
+}
+
+@media (max-width:320px){
+    .nav-menu{
+        width:100% !important;
+    }
+
+}
+@media (min-width:320px){
+    .nav-menu{
+        width:100% !important;
+    }
+}
+@media (min-width:425px){
+    .nav-menu{
+        width:60% !important;
+    }
+}
+@media (max-width:425px){
+    .card-desk{
+        flex-direction: column !important;
+        align-items: center;
+        height: 53% !important;
+    }
+    .chart{
+        width: 80% !important;
+        margin-top: 5px !important;
+    }
+    .box-shair{
+        width: 50% !important;
+    }
+
+}
+@media (min-width:768px){
+    .nav-menu{
+        width:30% !important;
+        
+    }
+}
+@media (max-width:767px){
+    .nav-11{
+        width: 100%;
+        flex-direction: row-reverse !important;
+    }
+        .box-shair{
+        width: 50% !important;
+    }
+}
+@media (min-width:1024px){
+    .nav-menu{
+        width:20% !important;
+        
+    }
+}
+.cart-h-text{
+    font-size: 10px;
+}
+
+td{
+    border: none;
+}
+
+@media(max-width:375px){
+    .box-shair{
+        width: 62% !important;
+    }
+}

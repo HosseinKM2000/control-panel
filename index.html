@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>project-5</title>
+</head>
+<body class="d-flex flex-column">
+    <nav class="navbar sticky-top d-flex flex-row justify-content-between align-items-center  px-3">
+      <div class="nav-11 d-flex flex-sm-row  justify-content-between flex-row-reverse gap-3 align-items-center ">
+          <h5 class="m-0">پنل مدیریت</h5>
+          <span data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+            <img src="./img/list.svg" alt="menu" class="menu">
+          </span>
+            <ul class="nav gap-2 d-md-flex d-none flex-row align-items-center p-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">داشبورد</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="#">اعضا</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled">تنظیمات</a>
+                </li>
+              </ul>
+      </div>
+      <div class="d-lg-block d-none">
+          <button class="btn btn-success">ایمیل های جدید <span class="badge bg-light text-dark">5</span></button>
+          <button class="btn btn-primary">نظرات جدید <span class="badge bg-light text-dark">9</span></button>
+          <button class="btn btn-danger">خروج</button>
+      </div>
+    </nav>
+    <div style="color: aliceblue;" class="d-flex">
+    <div class=" pt-4 d-flex flex-column" style="width:100%;" id="main">
+      <div class="card-desk d-flex flex-row justify-content-between h-25" >
+
+        <div class="chart card text-light bg-success mx-1 h-100 w-10 w-25 d-flex">
+          <div class="card-header">75200
+            <p class="cart-h-text m-0">تعداد اعضای ثبت نام کرده</p>
+          </div>
+          <div class="card-body p-1 d-flex h-100 w-100">
+            <canvas width="100%" height="100%" id="register-user"></canvas>
+          </div>
+      </div>
+      <div class="chart card text-light bg-primary mx-1 w-25 h-100">
+        <div class="card-header">22538
+          <p class="cart-h-text m-0">تعداد نظرات ثبت شده</p>
+        </div>
+        <div class="card-body p-1 d-flex h-100 w-100">
+          <canvas width="100%" height="100%" id="comment-user"></canvas>
+        </div>
+    </div>
+    <div class="chart card text-light bg-warning mx-1 w-25 h-100">
+      <div class="card-header">6000
+        <p class="cart-h-text m-0">محصولات خریداری شده</p>
+      </div>
+      <div class="card-body p-1 d-flex h-100 w-100">
+        <canvas width="100%" height="100%" id="shop-user"></canvas>
+      </div>
+  </div>
+  <div class="chart card text-light bg-dark mx-1 w-25 h-100">
+    <div class="card-header">15580
+      <p class="cart-h-text m-0">تعداد نظرات تایید شده</p>
+    </div>
+    <div class="card-body p-1 d-flex h-100 w-100">
+      <canvas width="100%" height="100%" id="accept-user"></canvas>
+    </div>
+  </div>
+  </div>
+  <div class="d-flex flex-row justify-content-between px-2 mt-5">
+    <h4 class="text-dark">داشبورد</h4>
+    <div class="d-flex w-25 box-shair">
+      <button type="button" class="btn btn-outline-dark m-0  p-0 h-50" style="font-size:10px;width: 30%;">اشتراک گذاری</button>
+      <button type="button" class="btn btn-outline-dark me-1  p-0 h-50" style="font-size:10px;width: 30%;">خروجی گرفتن</button>
+      <button type="button" class="btn btn-outline-dark me-3  p-0 h-50" style="font-size:10px;width: 30%;">این هفته</button>
+    </div>
+  </div>
+  <hr class="mx-2" style="color: black;">
+  <div class="card text-dark d-flex">
+    <div class="card-header">
+      <h6>آمار بازدید</h6>
+    </div>
+    <div class="card-body w-100 h-100">
+     <canvas class="w-100 h-100" id="online"></canvas>
+    </div>
+    <div class="card-footer d-flex flex-row justify-content-around">
+      <div class="w-25 px-2"> 
+        <h6>همه بازدید ها</h6>
+        <span>25680بازدید(40%)</span>
+        <div class="progress" style="background-color:rgb(218, 218, 218) ;">
+          <div class="progress-bar bg-warning " role="progressbar" style="width: 40%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+      </div>
+      <div class="w-25 px-2">
+        <h6>بازدید های یکتا</h6>
+        <span>15460(25%)</span>
+        <div class="progress" style="background-color:rgb(218, 218, 218) ;">
+          <div class="progress-bar bg-info " role="progressbar" style="width: 25%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+      </div>
+      <div class="w-25 px-2">
+        <h6>صفحات بازدید شده</h6>
+        <span>79500(80%)</span>
+        <div class="progress" style="background-color:rgb(218, 218, 218) ;">
+          <div class="progress-bar bg-success " role="progressbar" style="width:80%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+      </div>
+      <div class="w-25 px-2">
+        <h6>نرخ پرش</h6>
+        <span>36400(43%)</span>
+        <div class="progress" style="background-color:rgb(218, 218, 218) ;">
+          <div class="progress-bar bg-danger " role="progressbar" style="width:43%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="d-flex justify-content-start text-dark py-3 px-1">
+    <h5>آخرین مقالات</h5>
+  </div>
+  <div class="table-responsive px-1 h-100">
+    <table class="table border-0" style="border: solid 1px #ababab !important;">
+     <thead class="boredr-0">
+       <tr class="table-secondary border-1">
+         <th class="border-0" style="width:60%;">عنوان مقاله</th>
+         <th class="border-0" style="width:12%;">تعداد نظرات</th>
+         <th class="border-0" style="width:15%;">مقدار بازدید</th>
+         <th class="border-0">تنظیمات</th>
+       </tr>
+     </thead>
+     <tbody>
+       <tr>
+         <td>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</td>
+         <td>0</td>
+         <td>30</td>
+        <td style="width:14% ;">
+          <div class="d-flex flex-row">
+            <button class="btn btn-primary mb-1" style="font-size: 10px; border-radius: 0px 5px 5px 0px !important;width:fit-content;height:fit-content;padding: 2px;" type="button">ویرایش</button>
+            <button class="btn btn-danger mb-1" style="font-size:10px;    border-radius: 5px 0px 0px 5px !important;width:fit-content ;height:fit-content;padding: 2px;" type="button">حذف</button>
+          </div>
+        </td>
+       </tr>
+       <tr>
+        <td>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</td>
+        <td>2</td>
+        <td>245</td>
+        <td>
+          <div class="d-flex flex-row">
+            <button class="btn btn-primary mb-1" style="font-size: 10px; border-radius: 0px 5px 5px 0px !important;width:fit-content;height:fit-content;padding: 2px;" type="button">ویرایش</button>
+            <button class="btn btn-danger mb-1" style="font-size:10px;    border-radius: 5px 0px 0px 5px !important;width:fit-content ;height:fit-content;padding: 2px;" type="button">حذف</button>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</td>
+        <td>1</td>
+        <td>245</td>
+        <td>
+          <div class="d-flex flex-row">
+            <button class="btn btn-primary mb-1" style="font-size: 10px; border-radius: 0px 5px 5px 0px !important;width:fit-content;height:fit-content;padding: 2px;" type="button">ویرایش</button>
+            <button class="btn btn-danger mb-1" style="font-size:10px;    border-radius: 5px 0px 0px 5px !important;width:fit-content ;height:fit-content;padding: 2px;" type="button">حذف</button>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</td>
+        <td>9</td>
+        <td>400</td>
+        <td>
+          <div class="d-flex flex-row">
+            <button class="btn btn-primary mb-1" style="font-size: 10px; border-radius: 0px 5px 5px 0px !important;width:fit-content;height:fit-content;padding: 2px;" type="button">ویرایش</button>
+            <button class="btn btn-danger mb-1" style="font-size:10px;    border-radius: 5px 0px 0px 5px !important;width:fit-content ;height:fit-content;padding: 2px;" type="button">حذف</button>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</td>
+        <td>12</td>
+        <td>751</td>
+        <td>
+          <div class="d-flex flex-row">
+            <button class="btn btn-primary mb-1" style="font-size: 10px; border-radius: 0px 5px 5px 0px !important;width:fit-content;height:fit-content;padding: 2px;" type="button">ویرایش</button>
+            <button class="btn btn-danger mb-1" style="font-size:10px;    border-radius: 5px 0px 0px 5px !important;width:fit-content ;height:fit-content;padding: 2px;" type="button">حذف</button>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</td>
+        <td>0</td>
+        <td>45</td>
+        <td>
+          <div class="d-flex flex-row">
+            <button class="btn btn-primary mb-1" style="font-size: 10px; border-radius: 0px 5px 5px 0px !important;width:fit-content;height:fit-content;padding: 2px;" type="button">ویرایش</button>
+            <button class="btn btn-danger mb-1" style="font-size:10px;    border-radius: 5px 0px 0px 5px !important;width:fit-content ;height:fit-content;padding: 2px;" type="button">حذف</button>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</td>
+        <td>74</td>
+        <td>500</td>
+        <td>
+          <div class="d-flex flex-row">
+            <button class="btn btn-primary mb-1" style="font-size: 10px; border-radius: 0px 5px 5px 0px !important;width:fit-content;height:fit-content;padding: 2px;" type="button">ویرایش</button>
+            <button class="btn btn-danger mb-1" style="font-size:10px;    border-radius: 5px 0px 0px 5px !important;width:fit-content ;height:fit-content;padding: 2px;" type="button">حذف</button>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</td>
+        <td>42</td>
+        <td>258</td>
+        <td>
+          <div class="d-flex flex-row">
+            <button class="btn btn-primary mb-1" style="font-size: 10px; border-radius: 0px 5px 5px 0px !important;width:fit-content;height:fit-content;padding: 2px;" type="button">ویرایش</button>
+            <button class="btn btn-danger mb-1" style="font-size:10px;    border-radius: 5px 0px 0px 5px !important;width:fit-content ;height:fit-content;padding: 2px;" type="button">حذف</button>
+          </div>
+        </td>
+      </tr>
+     </tbody>
+    </table>
+  </div>
+</div>
+<div class="collapse collapse-vertical  position-absolute w-100" id="collapseWidthExample">
+  <div class="nav-menu p-4">
+    <h6 class="text-warning">منو اصلی</h6>
+    <div class="nav d-flex flex-column p-1"> 
+     <div class="nav-item d-flex flex-row mb-3 gap-2">
+      <img src="./img/speedometer.svg" alt="dashbord">
+       <p class="m-0">داشبورد</p>
+     </div>
+     <div class="nav-item d-flex flex-row mb-3 gap-2 align-items-center justify-content-between" id="box-coll">
+        <div class="d-flex flex-row gap-2">
+          <img src="./img/book-half.svg" alt="book">
+          <p class="m-0">مقالات</p>
+        </div>
+        <img src="./img/chevron-double-left.svg"   alt="left" class="coll-off"  type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+     </div>
+     <div class="mb-3 gap-2 collapse" id="collapseExample">
+      <ul class="list-unstyled d-flex flex-column align-items-end text-info">
+        <li class="mb-2">همه مقالات</li>
+        <li>ارسال مفاله</li>
+      </ul>
+    </div>
+     <div class="nav-item d-flex flex-row mb-3 gap-2">
+       <img src="./img/camera-reels-fill.svg" alt="source">
+       <p class="m-0">دوره ها</p>
+     </div>
+    </div>
+    <h6 class="mt-3 text-warning">متفرقه</h6>
+    <div class="nav d-flex flex-column p-1">
+      <div class="nav-item d-flex flex-row mb-3 gap-2">
+        <img src="./img/person-fill.svg" alt="person">
+        <p class="m-0">اعضا</p>
+      </div>
+      <div class="nav-item d-flex flex-row mb-3 gap-2">
+        <img src="./img/chat-left-fill.svg" alt="comment">
+        <p class="m-0">نظرات</p>
+      </div>
+      <div class="nav-item d-flex flex-row mb-3 gap-2">
+        <img src="./img/gear-fill.svg" alt="setting">
+        <p class="m-0">تنظیمات</p>
+      </div>
+    </div>
+  </div>
+  </div>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script>
+      let collapse = document.querySelector('#box-coll > img')
+       collapse.addEventListener('click',function(){
+         this.classList.remove('coll-off')
+       })
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
